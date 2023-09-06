@@ -42,9 +42,11 @@
   <body>
     <div id="app">
       <div class="container">
-        <ul v-for="email in emailList">
-          <li>{{ email }}</li>
-        </ul>
+        <template v-if="emailList.length == 10">
+          <ul v-for="email in emailList">
+            <li>{{ email }}</li>
+          </ul>
+        </template>
       </div>
     </div>
   </body>
