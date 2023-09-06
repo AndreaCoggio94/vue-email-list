@@ -1,19 +1,19 @@
-console.log("Hello world");
-
 const { createApp } = Vue;
 
 createApp({
   data() {
     return {
-      message: "Hello there!",
+      email: "",
     };
   },
+  methods: {},
   mounted() {
-    axios
-      .get("https://flynn.boolean.careers/exercises/api/random/mail")
-      .then(function (response) {
-        // handle success
-        console.log(response);
-      });
+    for (let i = 0; i < 10; i++) {
+      axios
+        .get("https://flynn.boolean.careers/exercises/api/random/mail")
+        .then(function (email) {
+          console.log(email.data.response);
+        });
+    }
   },
 }).mount("#app");
