@@ -41,7 +41,11 @@
   </head>
   <body>
     <div id="app">
-      <h1>{{ email }}</h1>
+      <div class="container">
+        <ul v-for="email in emailList">
+          <li>{{ email }}</li>
+        </ul>
+      </div>
     </div>
   </body>
 </html>
